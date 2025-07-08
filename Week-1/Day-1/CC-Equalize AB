@@ -1,0 +1,29 @@
+Equalize AB
+You are given two numbers A and B along with an integer X. In one operation you can do one of the following:
+Set A=A+X and B=B−X
+Set A=A−X and B=B+X
+Determine if you can make A and B equal after applying the operation any number of times (possibly zero).
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        long long A, B, X;
+        scanf("%lld %lld %lld", &A, &B, &X);
+
+        long long diff = llabs(A - B);
+
+        if ((A + B) % 2 == 0 && diff % (2 * X) == 0) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
+
