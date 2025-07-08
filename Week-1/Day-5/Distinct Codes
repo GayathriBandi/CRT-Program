@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        char S[10005];
+        scanf("%s", S);
+        int len = strlen(S);
+
+        int seen[26][26] = {0};  
+        int count = 0;
+
+        for (int i = 0; i < len - 1; i++) {
+            int first = S[i] - 'A';
+            int second = S[i+1] - 'A';
+
+            if (!seen[first][second]) {
+                seen[first][second] = 1;
+                count++;
+            }
+        }
+
+        printf("%d\n", count);
+    }
+
+    return 0;
+}
