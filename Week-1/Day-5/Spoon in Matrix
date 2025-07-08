@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define MAX 105
+
+char matrix[MAX][MAX];
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int R, C;
+        scanf("%d %d", &R, &C);
+        
+        for (int i = 0; i < R; i++) {
+            scanf("%s", matrix[i]);
+        }
+
+        int found = 0;
+
+        for (int i = 0; i < R && !found; i++) {
+            for (int j = 0; j <= C - 5; j++) {
+                if (tolower(matrix[i][j]) == 's' &&
+                    tolower(matrix[i][j+1]) == 'p' &&
+                    tolower(matrix[i][j+2]) == 'o' &&
+                    tolower(matrix[i][j+3]) == 'o' &&
+                    tolower(matrix[i][j+4]) == 'n') {
+                    found = 1;
+                    break;
+                }
+            }
+        }
+
+        for (int j = 0; j < C && !found; j++) {
+            for (int i = 0; i <= R - 5; i++) {
+                if (tolower(matrix[i][j]) == 's' &&
+                    tolower(matrix[i+1][j]) == 'p' &&
+                    tolower(matrix[i+2][j]) == 'o' &&
+                    tolower(matrix[i+3][j]) == 'o' &&
+                    tolower(matrix[i+4][j]) == 'n') {
+                    found = 1;
+                    break;
+                }
+            }
+        }
+
+        if (found)
+            printf("There is a spoon!\n");
+        else
+            printf("There is indeed no spoon!\n");
+    }
+
+    return 0;
+}
