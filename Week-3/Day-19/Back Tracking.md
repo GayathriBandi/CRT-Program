@@ -1,4 +1,4 @@
-# CRT Day - 18: Dynamic Programming Notes
+# CRT Day - 19: Back Tracking
 
 ## 1. Backtracking
 
