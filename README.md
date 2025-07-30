@@ -21,19 +21,19 @@ CRT-Training/
 
 ├── Week1/
 
-│ ├── Day1_Timecomplexity & Recursion
+│ ├── Day1
 
-│ ├── Day2_Arrays
+│ ├── Day2
 
-│ ├── Day3_2DArrays & Pointers
+│ ├── Day3
 
-│ └── Day4_Strings
+│ └── Day4
 
 ├── Week2/
 
-│ ├── Day1_Structures
+│ ├── Day1
 
-│ ├──Day2_Linked list
+│ ├──Day2
 
 │ ├── ...
 
@@ -42,10 +42,6 @@ CRT-Training/
 │ ├── ...
 
 ├── Week4/
-
-│ └── ...
-
-├── Week5/
 
 │ └── ...
 
