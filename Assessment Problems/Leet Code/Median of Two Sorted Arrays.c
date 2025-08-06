@@ -39,10 +39,10 @@ double findMedianSortedArrays(int* nums1, int m, int* nums2, int n) {
                 return (double)(maxLeftX > maxLeftY ? maxLeftX : maxLeftY);
             }
         } else if (maxLeftX > minRightY) {
-            // Move left
+
             high = partitionX - 1;
         } else {
-            // Move right
+            
             low = partitionX + 1;
         }
     }
