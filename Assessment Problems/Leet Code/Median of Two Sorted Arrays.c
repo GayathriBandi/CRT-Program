@@ -12,10 +12,10 @@ Output: 2.50000
 Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 
  #include <stdio.h>
-#include <limits.h> // For INT_MIN and INT_MAX
+#include <limits.h> 
 
 double findMedianSortedArrays(int* nums1, int m, int* nums2, int n) {
-    // Ensure nums1 is the smaller array
+    
     if (m > n) {
         return findMedianSortedArrays(nums2, n, nums1, m);
     }
@@ -32,7 +32,6 @@ double findMedianSortedArrays(int* nums1, int m, int* nums2, int n) {
         int minRightY = (partitionY == n) ? INT_MAX : nums2[partitionY];
 
         if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
-            // Correct partition
             if ((m + n) % 2 == 0) {
                 return ((double)( (maxLeftX > maxLeftY ? maxLeftX : maxLeftY) +
                                   (minRightX < minRightY ? minRightX : minRightY) )) / 2;
